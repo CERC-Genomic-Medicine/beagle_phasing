@@ -48,7 +48,7 @@ process phase_auto_chrom {
 	label "PHASING"
 
 	cache "lenient"
-        //scratch true
+        scratch true
         errorStrategy { sleep(Math.pow(2, task.attempt) * 200 as long); return "retry" }
 	maxRetries 0
 
